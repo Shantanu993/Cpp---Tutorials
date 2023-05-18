@@ -6,6 +6,7 @@ using namespace std;
 class binary
 {
     string s; // by default it is private
+    // void chk_bin(void); // if it is in private, then it cannot be used through main function.
 
 public:
     void read(void);
@@ -50,6 +51,7 @@ void binary ::ones_compliment(void)
 
 void binary ::display(void)
 {
+    chk_bin(); // example of Nesting of Member Functions
     cout << "displaying your binary number: " << endl;
     for (int i = 0; i < s.length(); i++)
     {
@@ -67,7 +69,7 @@ int main()
 
     binary b;
     b.read();
-    b.chk_bin();
+    // b.chk_bin();
     b.display();
     b.ones_compliment();
     b.display();
